@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adel Daniel | Project, Construction & Fit-Out Leadership Executive</title>
+  <meta name="description" content="Professional website for Adel Daniel, B.Arch., PMP — project, construction, program delivery, and fit-out leadership executive with 25+ years of experience across Canada and the Middle East." />
+  <meta name="theme-color" content="#020617" />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --dark: #020617;
+      --dark-soft: #0f172a;
+      --soft: #f1f5f9;
+      --shadow: 0 22px 55px rgba(15, 23, 42, 0.10);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .monogram {
+      width: 42px;
+      height: 42px;
+      border-radius: 16px;
+      background: var(--dark);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+    .brand strong { display: block; font-size: 14px; line-height: 1.1; }
+    .brand span { display: block; font-size: 12px; color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { font-size: 14px; font-weight: 700; color: #475569; }
+    .nav-links a:hover { color: var(--text); }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform .2s ease, background .2s ease, border .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button.dark { background: var(--dark); color: white; }
+    .button.light { background: white; border-color: #cbd5e1; color: var(--text); }
+    .menu-button { display: none; border: 1px solid var(--line); background: white; border-radius: 14px; padding: 8px 12px; font-size: 22px; }
+    .mobile-menu { display: none; border-top: 1px solid var(--line); padding: 14px 24px 20px; background: white; }
+    .mobile-menu a { display: block; padding: 10px 0; font-size: 14px; font-weight: 700; color: #475569; }
+
+    main { padding-top: 74px; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 48%, #e2e8f0 100%);
+    }
+    .hero-grid {
+      min-height: calc(100vh - 74px);
+      display: grid;
+      grid-template-columns: 1.04fr 0.96fr;
+      gap: 56px;
+      align-items: center;
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      background: white;
+      color: #475569;
+      border-radius: 999px;
+      padding: 8px 14px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+      font-size: 14px;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 24px 0 0;
+      font-size: clamp(46px, 7vw, 78px);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+    }
+    h1 span { display: block; color: #64748b; }
+    .lead { margin: 28px 0 0; max-width: 680px; color: #475569; font-size: 20px; line-height: 1.65; }
+    .sublead { margin: 14px 0 0; max-width: 680px; color: var(--muted); font-size: 16px; }
+    .hero-actions { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 14px; }
+    .profile-card {
+      background: var(--dark);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+    .profile-card-top { display: flex; justify-content: space-between; gap: 24px; }
+    .eyebrow { margin: 0 0 14px; color: #94a3b8; text-transform: uppercase; letter-spacing: .18em; font-size: 12px; font-weight: 900; }
+    .profile-card h2 { margin: 0; font-size: 32px; line-height: 1.15; letter-spacing: -0.03em; }
+    .badge-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      font-weight: 900;
+      background: rgba(255,255,255,0.10);
+      color: white;
+    }
+    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 34px; }
+    .stat { border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.05); border-radius: 22px; padding: 20px; }
+    .stat strong { display: block; font-size: 32px; line-height: 1; }
+    .stat span { display: block; color: #cbd5e1; margin-top: 10px; font-size: 14px; line-height: 1.45; }
+    .white-note { margin-top: 26px; background: white; color: var(--text); border-radius: 22px; padding: 20px; }
+    .white-note p { margin: 0; }
+    .white-note .small { color: var(--muted); text-transform: uppercase; letter-spacing: .13em; font-size: 12px; font-weight: 900; margin-bottom: 8px; }
+    section { scroll-margin-top: 90px; padding: 86px 0; }
+    .section-head { max-width: 760px; margin-bottom: 38px; }
+    .section-head h2 { margin: 0; font-size: clamp(32px, 4vw, 46px); line-height: 1.08; letter-spacing: -0.04em; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .card { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04); }
+    .card h3 { margin: 24px 0 12px; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em; }
+    .card p { margin: 0; color: #475569; }
+    .badge-dark {
+      width: 50px;
+      height: 50px;
+      border-radius: 17px;
+      background: var(--dark);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 900;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .chip { border: 1px solid var(--line); background: #f8fafc; border-radius: 999px; padding: 8px 13px; color: #475569; font-size: 14px; font-weight: 700; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 26px; }
+    .mini { background: #f8fafc; border-radius: 22px; padding: 18px; }
+    .mini strong { display: block; color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+    .mini p { color: var(--text); font-weight: 800; line-height: 1.45; }
+    .outcomes { margin-top: 44px; }
+    .outcomes-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; margin-bottom: 22px; }
+    .outcomes-top h3 { margin: 0; font-size: 28px; line-height: 1.15; letter-spacing: -0.03em; }
+    .outcome-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .outcome { display: flex; gap: 12px; background: #f8fafc; border-radius: 22px; padding: 18px; color: #334155; }
+    .check { font-weight: 900; color: var(--text); }
+    .filters { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+    .filter { cursor: pointer; border: 1px solid var(--line); background: white; color: #475569; border-radius: 999px; padding: 10px 18px; font-weight: 900; }
+    .filter.active { background: var(--dark); color: white; border-color: var(--dark); }
+    .timeline-shell { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+    .timeline { display: grid; gap: 18px; }
+    .timeline-item { display: grid; grid-template-columns: 180px 1fr; gap: 18px; background: #f8fafc; border-radius: 24px; padding: 20px; }
+    .period { margin: 0; color: var(--muted); text-transform: uppercase; letter-spacing: .13em; font-size: 12px; font-weight: 900; }
+    .role-card { background: white; border: 1px solid var(--line); border-radius: 22px; padding: 22px; }
+    .role-top { display: flex; justify-content: space-between; gap: 18px; align-items: flex-start; }
+    .role-top h3 { margin: 0; font-size: 22px; letter-spacing: -0.02em; }
+    .company { margin: 2px 0 0; color: #475569; font-weight: 800; }
+    .location { white-space: nowrap; background: #f1f5f9; color: #475569; border-radius: 999px; padding: 5px 10px; font-size: 12px; font-weight: 900; }
+    .role-card .desc { margin: 16px 0 0; color: #475569; }
+    .dark-card { background: var(--dark); color: white; border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); }
+    .dark-card p { color: #cbd5e1; }
+    .value-list { display: grid; gap: 10px; margin-top: 24px; }
+    .value-list div { background: rgba(255,255,255,0.06); border-radius: 16px; padding: 12px 14px; color: #e2e8f0; font-weight: 700; font-size: 14px; }
+    .contact-section { background: white; }
+    .contact-box { overflow: hidden; border-radius: 32px; background: var(--dark); box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr 1fr; }
+    .contact-copy { padding: 56px; color: white; }
+    .contact-copy h2 { margin: 0; font-size: clamp(34px, 4vw, 52px); line-height: 1.04; letter-spacing: -0.05em; }
+    .contact-copy p { color: #cbd5e1; font-size: 18px; }
+    .contact-links { background: white; padding: 50px; display: grid; gap: 14px; }
+    .contact-link { display: flex; align-items: center; gap: 16px; border: 1px solid var(--line); border-radius: 22px; padding: 18px; transition: transform .2s ease, box-shadow .2s ease; }
+    .contact-link:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(15,23,42,.08); }
+    .contact-link small { display: block; color: var(--muted); font-weight: 900; }
+    .contact-link strong { display: block; color: var(--text); }
+    footer { border-top: 1px solid var(--line); padding: 26px 0; color: var(--muted); font-size: 14px; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-links { display: flex; gap: 18px; font-weight: 700; }
+
+    @media (max-width: 980px) {
+      .hero-grid, .grid-2, .contact-box { grid-template-columns: 1fr; }
+      .grid-4, .outcome-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-grid { min-height: auto; }
+    }
+    @media (max-width: 760px) {
+      .nav-links { display: none; }
+      .menu-button { display: inline-block; }
+      .mobile-menu.open { display: block; }
+      .grid-4, .grid-2, .outcome-grid, .mini-grid, .stats { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; }
+      .role-top { flex-direction: column; }
+      .contact-copy, .contact-links { padding: 28px; }
+      section { padding: 64px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="brand" href="#top" aria-label="Adel Daniel home">
+        <div class="monogram">AD</div>
+        <div><strong>Adel Daniel</strong><span>B.Arch., PMP</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
+        <a class="button dark" href="mailto:adeldaniel@gmail.com">Contact</a>
+      </div>
+      <button class="menu-button" type="button" id="menuButton" aria-label="Toggle menu">≡</button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="pill">⌖ Canada • United Arab Emirates • Middle East</div>
+          <h1>Adel Daniel <span>B.Arch., PMP</span></h1>
+          <p class="lead">Project, Construction &amp; Fit-Out Leadership Executive with more than 25 years of experience across construction, project management consultancy, portfolio leadership, and contracting in Canada and the Middle East.</p>
+          <p class="sublead">Current public profile: <strong>Managing Director at A&amp;T Group Interiors</strong>. Career foundation includes senior leadership roles with Colliers Project Leaders, Al Reyami Interiors, Al Habtoor Engineering, and Consolidated Contractors Company.</p>
+          <div class="hero-actions">
+            <a class="button dark" href="#contact">Start a conversation →</a>
+            <a class="button light" href="https://ae.linkedin.com/in/adel-daniel-b4710155" target="_blank" rel="noreferrer">View LinkedIn in</a>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card-top">
+            <div><p class="eyebrow">Executive Profile</p><h2>Strategic delivery for complex projects and portfolios.</h2></div>
+            <div class="badge-circle">✓</div>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>25+</strong><span>Years of leadership experience</span></div>
+            <div class="stat"><strong>$320M</strong><span>Program portfolio responsibility</span></div>
+            <div class="stat"><strong>$80M</strong><span>Annual interiors portfolio delivered</span></div>
+            <div class="stat"><strong>72</strong><span>Project department team members led</span></div>
+          </div>
+          <div class="white-note"><p class="small">Primary Strength</p><p><strong>Bridging board-level strategy, project controls, contract administration, and practical site delivery.</strong></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">About</p><h2>A senior leader with architecture, project management, and contracting depth.</h2></div>
+        <div class="grid-2">
+          <div class="card"><div class="badge-dark">G</div><h3>Cross-market delivery experience</h3><p>Adel Daniel has led public and private-sector programs across Canada and the Middle East, combining architectural training with senior project leadership, portfolio governance, commercial awareness, and fit-out contracting management.</p></div>
+          <div class="card"><h3>Sector exposure</h3><div class="chips"><span class="chip">Institutional</span><span class="chip">Commercial</span><span class="chip">Correctional</span><span class="chip">Transportation</span><span class="chip">Healthcare</span><span class="chip">Hospitality</span><span class="chip">Retail</span><span class="chip">Education</span><span class="chip">Corporate Offices</span></div><div class="mini-grid"><div class="mini"><strong>Core focus</strong><p>Portfolio performance, client confidence, delivery certainty, and team capability.</p></div><div class="mini"><strong>Leadership approach</strong><p>Clear governance, disciplined reporting, risk management, and decisive execution.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Expertise</p><h2>What Adel brings to organizations and project portfolios.</h2></div>
+        <div class="grid-4">
+          <div class="card"><div class="badge-dark">01</div><h3>Program &amp; Project Delivery</h3><p>End-to-end leadership for complex capital projects, multidisciplinary programs, stakeholder governance, planning, controls, and close-out.</p></div>
+          <div class="card"><div class="badge-dark">02</div><h3>Fit-Out &amp; Interiors Contracting</h3><p>Deep regional experience in commercial interiors, hospitality, retail, healthcare, corporate offices, education, and high-performance project teams.</p></div>
+          <div class="card"><div class="badge-dark">03</div><h3>Contract &amp; Procurement Strategy</h3><p>FIDIC and CCDC contract administration, procurement oversight, tendering, claims support, dispute resolution, vendor engagement, and award processes.</p></div>
+          <div class="card"><div class="badge-dark">04</div><h3>PMO, Process &amp; Performance Improvement</h3><p>Development of SOPs, KPIs, management reporting, MIS dashboards, budget controls, risk frameworks, and organizational process improvement.</p></div>
+        </div>
+        <div class="card outcomes">
+          <div class="outcomes-top"><div><p class="eyebrow">Selected outcomes</p><h3>Performance improvements and complex delivery milestones.</h3></div><span class="pill">Awards &amp; Outcomes</span></div>
+          <div class="outcome-grid">
+            <div class="outcome"><span class="check">✓</span><span>Managed delivery of program and project management services for a $320M Infrastructure Ontario portfolio.</span></div>
+            <div class="outcome"><span class="check">✓</span><span>Served as single point of contact for IO government and asset management leadership, with decision authority over staffing, budget, awards, and service delivery.</span></div>
+            <div class="outcome"><span class="check">✓</span><span>Prepared project plans for Royal Victoria Hospital in Barrie and WAHA Field Hospital in Moosonee during the 2020 emergency response period.</span></div>
+            <div class="outcome"><span class="check">✓</span><span>Led project direction and procurement for the $22M Newmarket Courthouse HVAC Upgrade while minimizing program disruption.</span></div>
+            <div class="outcome"><span class="check">✓</span><span>Developed a five-year implementation strategy for Ontario Science Centre condition assessment projects, supporting funding and project initiation.</span></div>
+            <div class="outcome"><span class="check">✓</span><span>Established Al Reyami Interiors' project department, KRAs, KPIs, SOPs, and performance systems, improving average individual performance from 65% to 85%.</span></div>
+            <div class="outcome"><span class="check">✓</span><span>Drove business process re-engineering across relevant functions and reduced overall process flow gaps by 75%.</span></div>
+            <div class="outcome"><span class="check">✓</span><span>Managed commercial interiors, hospitality, and retail project delivery portfolios valued at approximately $80M annually.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Experience</p><h2>Career timeline across Canada and the Middle East.</h2></div>
+        <div class="filters"><button class="filter active" data-region="All">All</button><button class="filter" data-region="Canada">Canada</button><button class="filter" data-region="Middle East">Middle East</button></div>
+        <div class="timeline-shell"><div class="timeline" id="timeline"></div></div>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Credentials</p><h2>Education, certifications, systems, and professional capabilities.</h2></div>
+        <div class="grid-2">
+          <div class="card"><h3>Professional foundation</h3><div class="outcome-grid"><div class="outcome">› <span>Project Management Professional (PMP)</span></div><div class="outcome">› <span>Bachelor of Architecture, Helwan University, Cairo</span></div><div class="outcome">› <span>FIDIC Sound Contract Administration</span></div><div class="outcome">› <span>Green Building and LEED Core Concepts</span></div><div class="outcome">› <span>Risk Management Professional Courses</span></div><div class="outcome">› <span>Oracle ERP and Aconex Collaboration Platform</span></div><div class="outcome">› <span>Primavera, MS Project, AutoCAD</span></div><div class="outcome">› <span>Arabic and English fluency</span></div></div></div>
+          <div class="dark-card"><div class="badge-circle">LV</div><h3>Leadership value proposition</h3><p>Adel supports organizations that need stronger delivery discipline, clearer project governance, practical commercial control, and executive-level confidence across complex stakeholder environments.</p><div class="value-list"><div>✓ Portfolio-level governance</div><div>✓ Project team formation and mentoring</div><div>✓ Risk, cost, schedule, and quality control</div><div>✓ Client, consultant, contractor, and vendor alignment</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-copy"><p class="eyebrow">Contact</p><h2>Discuss a project, portfolio, or leadership mandate.</h2><p>For executive roles, consulting opportunities, project delivery advisory, fit-out leadership, or portfolio transformation conversations, connect directly with Adel Daniel.</p></div>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:adeldaniel@gmail.com"><div class="badge-dark">@</div><div><small>Email</small><strong>adeldaniel@gmail.com</strong></div></a>
+            <a class="contact-link" href="tel:+16479708409"><div class="badge-dark">☎</div><div><small>Phone</small><strong>+1 647 970 8409</strong></div></a>
+            <a class="contact-link" href="https://ae.linkedin.com/in/adel-daniel-b4710155" target="_blank" rel="noreferrer"><div class="badge-dark">in</div><div><small>LinkedIn</small><strong>adel-daniel-b4710155</strong></div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-grid"><p>© <span id="year"></span> Adel Daniel. Professional profile website.</p><div class="footer-links"><a href="mailto:adeldaniel@gmail.com">Email</a><a href="https://ae.linkedin.com/in/adel-daniel-b4710155" target="_blank" rel="noreferrer">LinkedIn</a></div></div></footer>
+
+  <script>
+    const timelineData = [
+      { period: "Current", role: "Managing Director", company: "A&T Group Interiors", location: "United Arab Emirates", region: "Middle East", description: "Executive leadership in fit-out contracting, strategic delivery, stakeholder management, operational performance, and organizational growth." },
+      { period: "2020 - Present", role: "Principal, IO Business Unit", company: "Colliers Project Leaders", location: "Canada", region: "Canada", description: "Responsible for the delivery of program and project management services for a major Infrastructure Ontario portfolio, including staffing, budget, contract deliverables, project performance, and senior stakeholder reporting." },
+      { period: "2017 - 2020", role: "Senior Project Manager, IO Business Unit", company: "Colliers Project Leaders", location: "Canada", region: "Canada", description: "Planned and oversaw assigned capital and ministry project portfolios, including chartering, scope definition, risk management, procurement, change control, monthly reporting, construction tendering, and close-out." },
+      { period: "2011 - 2017", role: "General Manager Projects", company: "Al Reyami Interiors", location: "Dubai, UAE", region: "Middle East", description: "Designed operational strategies, improved project delivery systems, led business process re-engineering, established department KPIs and SOPs, and strengthened management reporting and compliance systems." },
+      { period: "2006 - 2011", role: "Head of Projects", company: "Al Reyami Interiors", location: "Dubai, UAE", region: "Middle East", description: "Managed commercial interiors, hospitality, healthcare, education, corporate office, and retail portfolios while leading a 72-person project department across project managers, engineers, architects, and CAD teams." },
+      { period: "2003 - 2006", role: "Projects Manager", company: "Al Habtoor Engineering", location: "Dubai, UAE", region: "Middle East", description: "Managed schedules, progress reporting, payment certification, vendor packages, subcontractor coordination, shop drawings, site documentation, logistics, safety, and construction delivery controls." },
+      { period: "2000 - 2003", role: "Team Leader Architect", company: "Consolidated Contractors Company", location: "Middle East", region: "Middle East", description: "Led architectural coordination, tender scope review, shop drawing development, interface resolution, consultant submissions, and technical support for site delivery teams." }
+    ];
+
+    const timeline = document.getElementById('timeline');
+    const filters = document.querySelectorAll('.filter');
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function renderTimeline(region) {
+      const items = region === 'All' ? timelineData : timelineData.filter(item => item.region === region);
+      timeline.innerHTML = items.map(item => `
+        <article class="timeline-item">
+          <p class="period">${item.period}</p>
+          <div class="role-card">
+            <div class="role-top">
+              <div><h3>${item.role}</h3><p class="company">${item.company}</p></div>
+              <span class="location">${item.location}</span>
+            </div>
+            <p class="desc">${item.description}</p>
+          </div>
+        </article>`).join('');
+    }
+
+    filters.forEach(button => {
+      button.addEventListener('click', () => {
+        filters.forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+        renderTimeline(button.dataset.region);
+      });
+    });
+
+    menuButton.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderTimeline('All');
+  </script>
+</body>
+</html>
